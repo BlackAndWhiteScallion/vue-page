@@ -5,24 +5,49 @@ export default{
       return {
         username: "",
         password: "",
+        flag: 0,
       }
     },
     methods:{
       login(){
-        alert();
+        /*
+        if (this.username != "admin"){
+          this.flag = 1;
+        } else if (this.password != "admin") {
+          this.flag = 2;
+        } else {
+          */
+          this.$router.push({path:'/home'});
+          //this.$router.push({name:'home'});
+          //}
       }
     },
+    watch:{
+      username:function(){
+        if (this.flag != 0) this.flag = 0;
+      },
+      password:function(){
+        if (this.flag != 0) this.flag = 0;
+      }
+    }
 }
 
 </script>
 
 <template>
   <div>
-    <div class="image" src="">
+    <div class="imageWrapper">
+      
     </div>
     <div class="panel">
+      <div class="error" v-if="flag == 1">
+        <p>您的用户名不存在</p>
+      </div>
+      <div class="error" v-if="flag == 2">
+        <p>您的用户名与密码不相符</p>
+      </div>
       <div id="username">
-        <label>用户名</label>
+        <label @click="$router.push('about')">用户名</label>
         <input type="text" v-model="username">
       </div>
       <div> 
@@ -36,17 +61,24 @@ export default{
 </template>
 
 <style scoped>
-.image{
-  display:inline-block;
+.imageWrapper{
+  position: fixed;
+  display: inline-block;
   height: 100vh;
   min-height: 100vh;
   max-height: 100vh;
-  width: 60%;
+  width: 70%;
+}
+.backgroundImage{
+  width: 80%;
 }
 .panel{
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+.error{
+  color:red;
 }
 #username{
   right: 0.5rem;

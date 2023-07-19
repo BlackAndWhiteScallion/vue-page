@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import LoginView from '../views/LoginView.vue'
 
+
 Vue.use(VueRouter)
 
 const router = new VueRouter({
@@ -19,8 +20,8 @@ const router = new VueRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/HomeView.vue')
-    }
+      component: () => import ('../views/HomeView.vue')
+    },
   ]
 })
 
