@@ -11,6 +11,9 @@ import RadarGraphPanel from '@/components/RadarGraphPanel.vue'
   <div>
     <SideNav></SideNav>
     <DataPanel></DataPanel>
+    <DataPanel></DataPanel>
+    <DataPanel></DataPanel>
+    <DataPanel></DataPanel>
     <LineGraphPanel></LineGraphPanel>
     <DonutGraphPanel></DonutGraphPanel>
     <PolarGraphPanel></PolarGraphPanel>
@@ -18,5 +21,6 @@ import RadarGraphPanel from '@/components/RadarGraphPanel.vue'
   </div>
 </template>
 
-<style>
+<style scoped>
+
 </style>
