@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import SideNav from '@/components/SideNav.vue'
+import TopNav from '@/components/TopNav.vue'
 import DataPanel from '@/components/DataPanel.vue'
 import DonutGraphPanel from '@/components/DonutGraphPanel.vue'
 import LineGraphPanel from '@/components/LineGraphPanel.vue'
@@ -10,20 +11,47 @@ import RadarGraphPanel from '@/components/RadarGraphPanel.vue'
 <template>
   <div>
     <SideNav></SideNav>
-    <div>
-      <DataPanel></DataPanel>
-    </div>
-    <div>
-      <LineGraphPanel></LineGraphPanel>
-    </div>
-    <div style="width: 200px; height: 200px;">
-      <DonutGraphPanel></DonutGraphPanel>
-      <PolarGraphPanel></PolarGraphPanel>
-      <RadarGraphPanel></RadarGraphPanel>
+    <TopNav></TopNav>
+    <div class="c">
+      <div class="topPanel">
+        <DataPanel></DataPanel>
+        <DataPanel></DataPanel>
+        <DataPanel></DataPanel>
+        <DataPanel></DataPanel>
+      </div>
+      <div class="middlePanel">
+        <LineGraphPanel></LineGraphPanel>
+      </div>
+      <div class="bottomPanel">
+        <DonutGraphPanel></DonutGraphPanel>
+        <PolarGraphPanel></PolarGraphPanel>
+        <RadarGraphPanel></RadarGraphPanel>
+      </div>
     </div>
   </div>
 </template>
 
 <style scoped>
+.c{
+  margin-left: 10%;
+  margin-top: 5%;
+}
+.topPanel{
+  display: flex;
+  justify-content: space-evenly;
+  height: 30vh;
+}
+.middlePanel{
+  display: flex;
+  height: 30vh;
+  width: 100%;
+}
+.bottomPanel{
+  display: flex;
+  align-content: space-evenly;
+  justify-content: space-evenly;
+  height: 30vh;
+  max-width: 100%;
+}
 
 </style>

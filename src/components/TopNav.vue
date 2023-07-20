@@ -11,14 +11,6 @@
         <router-link to="/">Home</router-link>
         <router-link to="/">Home</router-link>
         <router-link to="/">Home</router-link>
-        <router-link to="/">Home</router-link>
-        <router-link to="/">Home</router-link>
-        <router-link to="/">Home</router-link>
-        <router-link to="/">Home</router-link>
-        <router-link to="/">Home</router-link>
-        <router-link to="/">Home</router-link>
-        <router-link to="/">Home</router-link>
-        <router-link to="/">Home</router-link>
       </nav>
 
     <router-view />
@@ -28,11 +20,9 @@
 <style scoped>
 nav {
   position: absolute;
-  width: 10%;
-  height: 100vh;
+  width: 100%;
   font-size: 12px;
   text-align: center;
-  margin-top: 2rem;
 }
 
 nav a.router-link-exact-active {

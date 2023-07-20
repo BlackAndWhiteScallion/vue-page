@@ -12,7 +12,13 @@
 </script>
 
 <template>
-  <div>
+  <div class="panel">
     {{ num }}
   </div>
 </template>
+
+<style scoped>
+.panel{
+  display: inline-block;
+}
+</style>
