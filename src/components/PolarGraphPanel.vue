@@ -1,102 +1,43 @@
 <template>
-  <PolarArea
-    :chart-options="chartOptions"
-    :chart-data="chartData"
-    :chart-id="chartId"
-    :dataset-id-key="datasetIdKey"
-    :plugins="plugins"
-    :css-classes="cssClasses"
-    :styles="styles"
-    :width="width"
-    :height="height"
-  />
+  <PolarArea  
+   id="my-chart-id"
+    :options="chartOptions"
+    :data="chartData"/>
 </template>
 
-<script lang = "ts">
-import { PolarArea } from 'vue-chartjs/legacy'
-
+<script lang="ts">
 import {
   Chart as ChartJS,
+  RadialLinearScale,
+  ArcElement,
   Title,
   Tooltip,
-  Legend,
-  ArcElement,
-  RadialLinearScale
+  Legend
 } from 'chart.js'
 
-ChartJS.register(Title, Tooltip, Legend, ArcElement, RadialLinearScale)
+import { PolarArea } from 'vue-chartjs'
+
+ChartJS.register(
+  RadialLinearScale,
+  ArcElement,
+  Title,
+  Tooltip,
+  Legend
+)
 
 export default {
-  name: 'PolarAreaChart',
+  name: 'App',
   components: {
     PolarArea
-  },
-  props: {
-    chartId: {
-      type: String,
-      default: 'polar-chart'
-    },
-    datasetIdKey: {
-      type: String,
-      default: 'label'
-    },
-    width: {
-      type: Number,
-      default: 400
-    },
-    height: {
-      type: Number,
-      default: 400
-    },
-    cssClasses: {
-      default: '',
-      type: String
-    },
-    styles: {
-      type: Object,
-      default: () => {}
-    },
-    plugins: {
-      type: Array,
-      default: () => []
-    }
-  },
+},
   data() {
     return {
       chartData: {
-        labels: [
-          'Eating',
-          'Drinking',
-          'Sleeping',
-          'Designing',
-          'Coding',
-          'Cycling',
-          'Running'
-        ],
-        datasets: [
-          {
-            label: 'My First dataset',
-            backgroundColor: 'rgba(179,181,198,0.2)',
-            pointBackgroundColor: 'rgba(179,181,198,1)',
-            pointBorderColor: '#fff',
-            pointHoverBackgroundColor: '#fff',
-            pointHoverBorderColor: 'rgba(179,181,198,1)',
-            data: [65, 59, 90, 81, 56, 55, 40]
-          },
-          {
-            label: 'My Second dataset',
-            backgroundColor: 'rgba(255,99,132,0.2)',
-            pointBackgroundColor: 'rgba(255,99,132,1)',
-            pointBorderColor: '#fff',
-            pointHoverBackgroundColor: '#fff',
-            pointHoverBorderColor: 'rgba(255,99,132,1)',
-            data: [28, 48, 40, 19, 96, 27, 100]
-          }
-        ]
+        labels: [ 'January', 'February', 'March' ],
+        datasets: [ {backgroundColor: ['#41B883', '#E46651', '#00D8FF', '#DD1B16'], data: [40, 20, 12] } ]
       },
       chartOptions: {
-        responsive: true,
-        maintainAspectRatio: false
+        responsive: true
       }
     }
   }
