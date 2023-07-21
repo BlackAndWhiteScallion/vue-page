@@ -58,21 +58,13 @@ export default{
 </template>
 
 <style scoped>
-.imageWrapper{
-  position: fixed;
-  display: inline-block;
-  height: 100vh;
-  min-height: 100vh;
-  max-height: 100vh;
-  width: 70%;
-}
-.backgroundImage{
-  width: 80%;
-}
 .panel{
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: white;
 }
 .error{
   color:red;
