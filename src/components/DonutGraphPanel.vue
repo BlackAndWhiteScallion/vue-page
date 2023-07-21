@@ -31,12 +31,24 @@ export default {
   data() {
     return {
       chartData: {
-        labels: [ 'January', 'February', 'March' ],
+        labels: ['January', 'February', 'March' ],
         datasets: [ {backgroundColor: ['#41B883', '#E46651', '#00D8FF', '#DD1B16'], data: [40, 20, 12] } ],
         
       },
       chartOptions: {
-        responsive: true
+        responsive: true,
+        aspectRatio: 1.7,
+        plugins:{
+          title:{
+            align: 'start',
+            display: true,
+            text:'访问来源',
+          },
+          legend:{
+            display: true,
+            position: 'bottom',
+          }
+        }
       }
     }
   }

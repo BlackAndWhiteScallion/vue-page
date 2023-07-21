@@ -50,6 +50,11 @@ export default {
       chartOptions: {
         responsive: true,
         aspectRatio: 5,
+        plugins:{
+          legend:{
+            display: false,
+          }
+        }
       },
     }
   }

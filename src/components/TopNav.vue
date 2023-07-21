@@ -4,15 +4,8 @@
 <template>
   <div>
       <nav>
-        <router-link to="/Home">Home</router-link>
-        <router-link to="/">Home</router-link>
-        <router-link to="/">Home</router-link>
-        <router-link to="/">Home</router-link>
-        <router-link to="/">Home</router-link>
-        <router-link to="/">Home</router-link>
-        <router-link to="/">Home</router-link>
+        <router-link to="/home">首页</router-link>
       </nav>
-
     <router-view />
   </div>
 </template>
@@ -21,13 +14,15 @@
 nav {
   position: fixed;
   width: 100%;
-  font-size: 12px;
+  font-size: 1rem;
   margin-bottom: 1px;
   z-index: 10;
+  background-color: white;
 }
 
 nav a.router-link-exact-active {
-  color: var(--color-text);
+  color:green;
+  border-bottom: 1px solid green;
 }
 
 nav a.router-link-exact-active:hover {
@@ -38,10 +33,6 @@ nav a {
   display: inline-block;
   padding: 0 1rem;
   border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
 }
 
 </style>
