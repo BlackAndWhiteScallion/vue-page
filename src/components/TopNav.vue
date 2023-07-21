@@ -4,7 +4,7 @@
 <template>
   <div>
       <nav>
-        <router-link to="/">Home</router-link>
+        <router-link to="/Home">Home</router-link>
         <router-link to="/">Home</router-link>
         <router-link to="/">Home</router-link>
         <router-link to="/">Home</router-link>
@@ -19,10 +19,11 @@
 
 <style scoped>
 nav {
-  position: absolute;
+  position: fixed;
   width: 100%;
   font-size: 12px;
-  text-align: center;
+  margin-bottom: 1px;
+  z-index: 10;
 }
 
 nav a.router-link-exact-active {

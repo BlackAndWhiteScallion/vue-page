@@ -5,7 +5,10 @@
     },
     data(){
       return{
-        num: 0
+        name: 0,
+        num: 0,
+        month: '',
+        total: 0,
       }
     }
   }
@@ -13,7 +16,10 @@
 
 <template>
   <div class="panel">
+    {{ name }}
+    {{ month }}
     {{ num }}
+    {{ total }}
   </div>
 </template>
 
@@ -21,4 +27,5 @@
 .panel{
   display: inline-block;
 }
+
 </style>

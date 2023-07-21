@@ -11,7 +11,7 @@ import RadarGraphPanel from '@/components/RadarGraphPanel.vue'
 <template>
   <div>
     <SideNav></SideNav>
-    <TopNav></TopNav>
+    <TopNav class="topNav"></TopNav>
     <div class="c">
       <div class="topPanel">
         <DataPanel></DataPanel>
@@ -20,12 +20,12 @@ import RadarGraphPanel from '@/components/RadarGraphPanel.vue'
         <DataPanel></DataPanel>
       </div>
       <div class="middlePanel">
-        <LineGraphPanel></LineGraphPanel>
+        <LineGraphPanel class="lineGraph"></LineGraphPanel>
       </div>
       <div class="bottomPanel">
+        <RadarGraphPanel></RadarGraphPanel>
         <DonutGraphPanel></DonutGraphPanel>
         <PolarGraphPanel></PolarGraphPanel>
-        <RadarGraphPanel></RadarGraphPanel>
       </div>
     </div>
   </div>
@@ -33,18 +33,32 @@ import RadarGraphPanel from '@/components/RadarGraphPanel.vue'
 
 <style scoped>
 .c{
+  display: flex;
+  flex-direction: column;
   margin-left: 10%;
-  margin-top: 5%;
+  padding: 1px;
+  margin-top: 1vh;
+  align-content: space-evenly;
+  justify-content: space-evenly;
+}
+.topNav{
+  margin-left: 10%;
 }
 .topPanel{
   display: flex;
   justify-content: space-evenly;
-  height: 30vh;
+  height: 15vh;
+  margin-top: 10vh;
+  background-color: white;
 }
 .middlePanel{
   display: flex;
+  align-items: center;
+  justify-content: center;
   height: 30vh;
   width: 100%;
+  margin-top: 5vh;
+  background-color: white;
 }
 .bottomPanel{
   display: flex;
@@ -52,6 +66,8 @@ import RadarGraphPanel from '@/components/RadarGraphPanel.vue'
   justify-content: space-evenly;
   height: 30vh;
   max-width: 100%;
+  margin-top: 5vh;
+  background-color: white;
 }
 
 </style>

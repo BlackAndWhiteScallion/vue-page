@@ -36,9 +36,6 @@ export default{
 
 <template>
   <div>
-    <div class="imageWrapper">
-      
-    </div>
     <div class="panel">
       <div class="error" v-if="flag == 1">
         <p>您的用户名不存在</p>

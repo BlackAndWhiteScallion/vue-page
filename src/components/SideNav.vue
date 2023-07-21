@@ -27,25 +27,35 @@
 
 <style scoped>
 nav {
-  position: absolute;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
   width: 10%;
-  height: 100vh;
-  font-size: 12px;
+  margin-top: -2vh;
+  height: 102vh;
+  font-size: 16px;
+  justify-content: space-evenly;
   text-align: center;
-  margin-top: 2rem;
+  background-color: black;
+  z-index: 10;
 }
 
 nav a.router-link-exact-active {
   color: var(--color-text);
+  background-color: blue;
 }
 
 nav a.router-link-exact-active:hover {
   background-color: transparent;
 }
 
+nav a:hover{
+  background-color: blue;
+}
+
 nav a {
   display: inline-block;
-  padding: 0 1rem;
+  padding: 1rem;
   border-left: 1px solid var(--color-border);
 }
 

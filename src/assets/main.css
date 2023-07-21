@@ -1,8 +1,8 @@
 @import "./base.css";
 
 #app {
-
   font-weight: normal;
+  overflow: auto;
 }
 
 a,
@@ -21,9 +21,5 @@ a,
 @media (min-width: 1024px) {
   body {
     place-items: center;
-  }
-
-  #app {
-    padding: 0 2rem;
   }
 }

@@ -4,19 +4,28 @@ import LoginPanel from '@/components/LoginPanel.vue'
 
 <template>
   <main>
-    <LoginPanel class="LoginPanel"> </LoginPanel>
+    <img class="backgroundImage" src="src\assets\background.jpg">
+    <div class="LoginPanel">
+    <LoginPanel></LoginPanel>
+  </div>
   </main>
 </template>
 
 <style scoped>
 .LoginPanel{
     color:black;
-    width: 100%;
-    height: 100%;
+    width: 40%;
+    margin-left: 60%;
+    padding-top: 35vh;
+    height: 95vh;
+    justify-content: center;
+    align-items: center;
 }
 .backgroundImage{
     position: absolute;
     margin: 0px;
     padding: 0px;
+    max-height: 100vh;
+    overflow:hidden;
 }
 </style>
