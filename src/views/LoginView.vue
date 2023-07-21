@@ -30,12 +30,16 @@ import LoginPanel from '@/components/LoginPanel.vue'
     overflow:hidden;
 }
 @media screen and (max-width: 970px) {
+  body{
+    background-color: blue;
+  }
   .backgroundImage{
     display: none;
   }
   .LoginPanel{
     margin-left: 30%;
     width: 40%;
+    border: 1px solid black;
   }
 }
 </style>
