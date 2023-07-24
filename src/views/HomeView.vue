@@ -78,8 +78,6 @@ export default{
 .topPanel{
   display: flex;
   justify-content: space-between;
-  padding-left: 1rem;
-  padding-right: 1rem;
   margin-top: 5vh;
   height: 20vh;
 }
@@ -121,6 +119,10 @@ export default{
 }
 .data{
   background-color: white;
+  float: left;
+  width: 23%;
+  height: 80%;
+  margin: 1rem;
 }
 .selected{
   border-bottom: 1px solid green;
