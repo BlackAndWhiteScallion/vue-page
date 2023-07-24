@@ -19,12 +19,15 @@ export default{
   },
   data() {
     return {
-      display: true,
+      display: 1,
     }
   },
   methods:{
-    toggleDisplay(){
-      this.display = !this.display;
+    Display1(){
+      this.display = 1;
+    },
+    Display2(){
+      this.display = 2;
     }
   }
 }
@@ -43,10 +46,11 @@ export default{
       </div>
       <div class="middlePanel">
         <div class="middleNav">  
-          <div @click="toggleDisplay">流量趋势</div>
-          <div>访问量</div>
+          <div @click="Display1" v-bind:class="{selected:display == 1}">流量趋势</div>
+          <div @click="Display2" v-bind:class="{selected:display == 2}">访问量</div>
         </div>
-        <LineGraphPanel v-if="display == true" class="graph lineGraph"></LineGraphPanel>
+        <LineGraphPanel v-if="display == 1" class="graph lineGraph"></LineGraphPanel>
+        <LineGraphPanel v-if="display == 2" class="graph lineGraph"></LineGraphPanel>
       </div>
       <div class="bottomPanel">
         <RadarGraphPanel class="graph graphPanel"></RadarGraphPanel>
@@ -89,7 +93,7 @@ export default{
   margin-top: 2vh;
 }
 .middleNav{
-  display: none;
+  display: flex;
 }
 .bottomPanel{
   display: flex;
@@ -101,6 +105,7 @@ export default{
   padding-right: 2rem;
   margin-top: 2vh;
 }
+
 .graph{
   background-color: white;
 }
@@ -111,4 +116,9 @@ export default{
 .data{
   background-color: white;
 }
+.selected{
+  border-bottom: 1px solid green;
+  color: green;
+}
+
 </style>
