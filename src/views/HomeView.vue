@@ -46,11 +46,11 @@ export default{
       </div>
       <div class="middlePanel">
         <div class="middleNav">  
-          <div @click="Display1" v-bind:class="{selected:display == 1}">流量趋势</div>
-          <div @click="Display2" v-bind:class="{selected:display == 2}">访问量</div>
+          <div class="middleNavButton" @click="Display1" v-bind:class="{selected:display == 1}">流量趋势</div>
+          <div class="middleNavButton" @click="Display2" v-bind:class="{selected:display == 2}">访问量</div>
         </div>
         <LineGraphPanel v-if="display == 1" class="graph lineGraph"></LineGraphPanel>
-        <LineGraphPanel v-if="display == 2" class="graph lineGraph"></LineGraphPanel>
+        <LineGraphPanel v-if="display == 2" class="graph lineGraph" seed='1'></LineGraphPanel>
       </div>
       <div class="bottomPanel">
         <RadarGraphPanel class="graph graphPanel"></RadarGraphPanel>
@@ -85,7 +85,7 @@ export default{
 }
 .middlePanel{
   display: flex;
-  height: 30vh;
+  flex-direction: column;
   background-color: white;
   margin-left: 1rem;
   margin-right: 1rem;
@@ -93,7 +93,13 @@ export default{
   margin-top: 2vh;
 }
 .middleNav{
-  display: flex;
+  margin-top: 0.5rem;
+  border-bottom: 1px solid lightgray;
+}
+.middleNavButton{
+  display:inline-block;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 .bottomPanel{
   display: flex;
