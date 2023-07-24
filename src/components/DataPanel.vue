@@ -46,7 +46,8 @@
 }
 .topbar{
   width: 100%;
-  display: inline-block;
+  display: flex;
+  justify-content: space-between;
   border-bottom: 1px solid lightgray;
 }
 .middle{
@@ -60,12 +61,12 @@ p{
 }
 .bottom{
   display: flex;
+  justify-content: space-between;
 }
 .front{
   margin-left: 0%;
 }
 .back{
-  margin-left: 70%;
 }
 .icon{
   width: 20%;

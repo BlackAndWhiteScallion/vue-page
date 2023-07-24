@@ -72,9 +72,9 @@ export default {
               display: true,
               centerPointLabels: true,
               font: {
-                size: 18
+                size: 12
               }
-            }
+            },
           }
         },
         plugins:{

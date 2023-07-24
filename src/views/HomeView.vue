@@ -53,10 +53,25 @@ export default{
         <LineGraphPanel v-if="display == 2" class="graph lineGraph" seed='1'></LineGraphPanel>
       </div>
       <div class="bottomPanel">
-        <RadarGraphPanel class="graph graphPanel"></RadarGraphPanel>
-        <DonutGraphPanel class="graph graphPanel"></DonutGraphPanel>
-        <PolarGraphPanel class="graph graphPanel"></PolarGraphPanel>
+        <div class="graphPanel">
+          <RadarGraphPanel class="graph"></RadarGraphPanel>
+        </div>
+        <div class="graphPanel">
+          <DonutGraphPanel class="graph"></DonutGraphPanel>
+        </div>
+        <div class="graphPanel">
+          <PolarGraphPanel class="graph"></PolarGraphPanel>
+        </div>
       </div>
+      <footer>
+        <form>
+          选择样式
+          <input type="radio" name="radio" checked> 默认
+          <input type="radio" name="radio"> 销量统计
+          <input type="radio" name="radio"> 业务统计
+          <input type="radio" name="radio"> 我的任务
+        </form>
+      </footer>
     </div>
   </div>
 </template>
@@ -104,19 +119,19 @@ export default{
   align-content: space-between;
   justify-content: space-between;
   height: 30vh;
-  max-width: 100%;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   margin-top: 2vh;
 }
-
-.graph{
-  background-color: white;
-}
 .graphPanel{
-  width: 40%;
-  box-shadow: 0rem 1rem 0rem 1rem white;
+  float: left;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  padding: 0.5rem;
+  width: 32%;
 }
+
 .data{
   background-color: white;
   float: left;
@@ -129,4 +144,9 @@ export default{
   color: green;
 }
 
+footer{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 1rem;
+}
 </style>
