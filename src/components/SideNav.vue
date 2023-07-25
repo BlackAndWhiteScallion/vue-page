@@ -1,29 +1,108 @@
-<script setup lang="ts">
+<script lang="ts">
+
+export default {
+  name: 'sideNav',
+  data(){
+    return {
+      menuList:[
+          {
+            title:'Dashboard',
+            path:'/home',
+            children:[
+              {
+                title:"首页",
+                path:"/home",
+              },
+              {
+                title:'零代码',
+                path:"/",
+              },
+              {
+                title:"工作台",
+                path:"/",
+              },
+            ]
+          },
+          {
+            title:"个人办公",
+            path:'/',
+          },
+          {
+            title:"业务申请",
+            path:'/',
+          },
+          {
+            title:"QA申请",
+            path:'/',
+          },
+          {
+            title:"表单设计",
+            path:"/",
+          },
+          {
+            title:"流程设计",
+            path:"/",
+          },
+          {
+            title:"在线开发",
+            path:"/",
+          },
+          {
+            title:"可视化设计",
+            path:"/",
+          },
+          {
+            title:"流程管理",
+            path:"/",
+          },
+          {
+            title:"统计报表",
+            path:"/",
+          },
+          {
+            title:"OA模块",
+            path:"/"
+          },
+          {
+            title:"系统管理",
+            path:"/",
+          },
+          {
+            title:"系统监控",
+            path:"/",
+          },
+          {
+            title:"消息中心",
+            path:"/",
+          },
+          {
+            title:"Mock示例",
+            path:"/",
+          },
+          {
+            title:"组件功能",
+            path:"/",
+          },
+          {
+            title:"关于",
+            path:"/",
+          }
+      ]
+    }
+  },
+}
 </script>
 
 <template>
   <div>
       <nav>
-        <router-link to="/home">Dashboard</router-link>
-        <router-link to="/">个人办公</router-link>
-        <router-link to="/">业务申请</router-link>
-        <router-link to="/">QA申请</router-link>
-        <router-link to="/">表单设计</router-link>
-        <router-link to="/">流程设计</router-link>
-        <router-link to="/">在线开发</router-link>
-        <router-link to="/">可视化设计</router-link>
-        <router-link to="/">流程管理</router-link>
-        <router-link to="/">统计报表</router-link>
-        <router-link to="/">OA模块</router-link>
-        <router-link to="/">系统管理</router-link>
-        <router-link to="/">系统监控</router-link>
-        <router-link to="/">消息中心</router-link>
-        <router-link to="/">Mock示例</router-link>
-        <router-link to="/">组件功能</router-link>
-        <router-link to="/">关于</router-link>
-
+          <div v-for="item in menuList">
+            <router-link :to="item.path"> {{ item.title }}</router-link>
+            <div class="subNav" v-if="item.children && item.children.length > 0">
+              <router-link v-for="subItem in item.children" :to="subItem.path"> {{ subItem.title }}</router-link>
+            </div>
+          </div>
       </nav>
-
     <router-view />
   </div>
 </template>
@@ -35,8 +114,9 @@ nav {
   position: fixed;
   width: 10%;
   margin-top: -2vh;
+  padding-top: 5vh;
   height: 102vh;
-  text-align: center;
+  text-align: left;
   background-color: black;
   z-index: 10;
   font-size: 0.8rem;
@@ -57,13 +137,17 @@ nav a:hover{
 nav a {
   display: inline-block;
   color: white;
-  border-left: 1px solid var(--color-border);
+  width: 100%;
   padding: 0.3rem;
+  padding-left: 1rem;
 }
 
-nav a:first-of-type {
-  border: 0;
-  margin-top: 5vh;
+.subNav{
+  display: flex;
+  flex-direction: column;
+}
+.subNav a {
+  padding-left: 2rem;
 }
 
 </style>

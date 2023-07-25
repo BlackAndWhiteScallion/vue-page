@@ -40,27 +40,17 @@ export default {
           'Designing',
           'Coding',
           'Cycling',
-          'Running'
         ],
         datasets: [
           {
             label: 'My First dataset',
-            backgroundColor: 'rgba(179,181,198,0.2)',
-            pointBackgroundColor: 'rgba(179,181,198,1)',
+            backgroundColor: ['rgba(151,238,238,1)', 'rgba(8,160,198,1)', 'rgba(154,15,148,1)', 'rgba(109,233,169,1)'],
+            pointBackgroundColor: 'rgba(151,238,238,1)',
             pointBorderColor: '#fff',
             pointHoverBackgroundColor: '#fff',
             pointHoverBorderColor: 'rgba(179,181,198,1)',
-            data: [65, 59, 90, 81, 56, 55, 40]
+            data: [65, 59, 90, 81, 23, 43]
           },
-          {
-            label: 'My Second dataset',
-            backgroundColor: 'rgba(255,99,132,0.2)',
-            pointBackgroundColor: 'rgba(255,99,132,1)',
-            pointBorderColor: '#fff',
-            pointHoverBackgroundColor: '#fff',
-            pointHoverBorderColor: 'rgba(255,99,132,1)',
-            data: [28, 48, 40, 19, 96, 27, 100]
-          }
         ]
       },
       chartOptions: {

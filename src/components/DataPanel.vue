@@ -27,12 +27,12 @@
       <p class="back">{{ month }}</p>
     </div>
     <div class="middle">
-      <p class="front">{{ num }}</p>
+      <p class="front">${{ num }}</p>
       
     </div>
     <div class="bottom">
       <p class="front">{{ totalLabel }}</p>
-      <p class="back">{{ total }}</p>
+      <p class="back">${{ total }}</p>
     </div>
   </div>
 </template>

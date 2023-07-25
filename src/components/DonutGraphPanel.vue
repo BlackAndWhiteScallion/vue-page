@@ -31,8 +31,8 @@ export default {
   data() {
     return {
       chartData: {
-        labels: ['January', 'February', 'March' ],
-        datasets: [ {backgroundColor: ['#41B883', '#E46651', '#00D8FF', '#DD1B16'], data: [40, 20, 12] } ],
+        labels: ['January', 'February', 'March', 'April'],
+        datasets: [ {backgroundColor: ['rgba(8,160,198,1)', 'rgba(151,238,238,1)', 'rgba(154,15,148,1)', 'rgba(109,233,169,1)' ], data: [40, 20, 12, 44] } ],
         
       },
       chartOptions: {
@@ -47,6 +47,9 @@ export default {
           legend:{
             display: true,
             position: 'bottom',
+            labels:{
+              boxWidth: 20,
+            }
           }
         }
       }

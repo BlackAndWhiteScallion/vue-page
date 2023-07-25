@@ -48,20 +48,20 @@ export default {
         ],
         datasets: [
             {
-              label: 'My First dataset',
-              backgroundColor: 'rgba(179,181,198,0.2)',
-              borderColor: 'rgba(179,181,198,1)',
-              pointBackgroundColor: 'rgba(179,181,198,1)',
+              label: 'dataset',
+              backgroundColor: 'rgba(151,238,238,0.5)',
+              borderColor: 'rgba(151,238,238,1)',
+              pointBackgroundColor: 'rgba(151,238,238,0.5)',
               pointBorderColor: '#fff',
               pointHoverBackgroundColor: '#fff',
               pointHoverBorderColor: 'rgba(179,181,198,1)',
               data: [65, 59, 90, 81, 56, 55, 40]
             },
             {
-              label: 'My Second dataset',
-              backgroundColor: 'rgba(255,99,132,0.2)',
-              borderColor: 'rgba(255,99,132,1)',
-              pointBackgroundColor: 'rgba(255,99,132,1)',
+              label: 'dataset',
+              backgroundColor: 'rgba(8,160,198,0.5)',
+              borderColor: 'rgba(8,160,198,1)',
+              pointBackgroundColor: 'rgba(8,160,198,1)',
               pointBorderColor: '#fff',
               pointHoverBackgroundColor: '#fff',
               pointHoverBorderColor: 'rgba(255,99,132,1)',
@@ -81,6 +81,9 @@ export default {
           legend:{
             display: true,
             position: 'bottom',
+            labels:{
+              boxWidth: 20,
+            }
           }
         }
       }

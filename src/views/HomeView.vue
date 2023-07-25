@@ -96,6 +96,13 @@ export default{
   margin-top: 5vh;
   height: 20vh;
 }
+.data{
+  background-color: white;
+  float: left;
+  width: 27%;
+  height: 90%;
+  margin: 1rem;
+}
 .middlePanel{
   display: flex;
   flex-direction: column;
@@ -130,14 +137,6 @@ export default{
   background-color: white;
   padding: 0.5rem;
   width: 32%;
-}
-
-.data{
-  background-color: white;
-  float: left;
-  width: 23%;
-  height: 80%;
-  margin: 1rem;
 }
 .selected{
   border-bottom: 1px solid green;
