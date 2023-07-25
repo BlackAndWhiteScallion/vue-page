@@ -8,10 +8,10 @@
 }
 
 :root{
-  --graph-color1: 'rgba(151,238,238,0.5)',
-  --graph-color2: 'rgba(109,233,169,0.5)',
-  --graph-color3: 'rgba(8,160,198,0.5)',
-  --graph-color4: 'rgba(154,15,148,0.5)',
+  --graphcolor1: 'rgba(151,238,238,0.5)',
+  --graphcolor2: 'rgba(109,233,169,0.5)',
+  --graphcolor3: 'rgba(8,160,198,0.5)',
+  --graphcolor4: 'rgba(154,15,148,0.5)',
 }
 
 body {

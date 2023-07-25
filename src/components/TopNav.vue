@@ -14,15 +14,16 @@
 nav {
   position: fixed;
   width: 100%;
-  font-size: 1rem;
+  font-size: 0.7rem;
+  padding: 0.5rem;
   margin-bottom: 1px;
   z-index: 10;
   background-color: white;
 }
 
 nav a.router-link-exact-active {
-  color:green;
-  border-bottom: 1px solid green;
+  color: lightskyblue;
+  border-bottom: 1px solid lightskyblue;
 }
 
 nav a.router-link-exact-active:hover {

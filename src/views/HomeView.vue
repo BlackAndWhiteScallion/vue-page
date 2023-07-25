@@ -115,6 +115,7 @@ export default{
 .middleNav{
   margin-top: 0.5rem;
   border-bottom: 1px solid lightgray;
+  font-size: 0.7rem;
 }
 .middleNavButton{
   display:inline-block;
@@ -139,16 +140,23 @@ export default{
   width: 32%;
 }
 .selected{
-  border-bottom: 1px solid green;
-  color: green;
+  border-bottom: 1px solid lightskyblue;
+  color: lightskyblue;
 }
 
 footer{
   display: flex;
   justify-content: flex-end;
-  
+
   margin-right: 1rem;
   margin-top: 0.5rem;
   font-size: 70%;
+}
+
+footer input[type=radio] {
+  margin-bottom: 0.1rem;
+  padding: 0;
+  display: inline-block;
+  vertical-align: bottom;
 }
 </style>
