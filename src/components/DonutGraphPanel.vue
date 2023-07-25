@@ -32,7 +32,7 @@ export default {
     return {
       chartData: {
         labels: ['January', 'February', 'March', 'April'],
-        datasets: [ {backgroundColor: ['rgba(8,160,198,1)', 'rgba(151,238,238,1)', 'rgba(154,15,148,1)', 'rgba(109,233,169,1)' ], data: [40, 20, 12, 44] } ],
+        datasets: [ {backgroundColor: ['rgba(8,160,198,1)', 'rgba(151,238,238,1)', 'rgba(154,15,148,1)', 'rgb(75, 192, 192, 1)' ], data: [40, 20, 12, 44] } ],
         
       },
       chartOptions: {

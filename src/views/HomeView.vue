@@ -146,6 +146,9 @@ export default{
 footer{
   display: flex;
   justify-content: flex-end;
+  
   margin-right: 1rem;
+  margin-top: 0.5rem;
+  font-size: 70%;
 }
 </style>
