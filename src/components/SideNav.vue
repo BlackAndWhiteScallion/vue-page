@@ -95,11 +95,15 @@ export default {
     }
   },
   created(){
-    this.activeMenu = this.initialActive || "home";
+    this.activeMenu = this.initialActive || "Dashboard";
   },
   methods:{
     changeActive: function(active){
-      this.activeMenu = active;
+      if (this.activeMenu == active){
+        this.activeMenu = "";
+      } else {
+        this.activeMenu = active;
+      }
     }
   }
 }
@@ -160,6 +164,11 @@ nav a {
   width: 100%;
   padding: 0.3rem;
   padding-left: 1rem;
+}
+
+.navSection:hover{
+  background-color: blue;
+  cursor: pointer;
 }
 
 .subNav{
