@@ -2,8 +2,12 @@
 
 export default {
   name: 'sideNav',
+  props:{
+    initialActive: String,
+  },
   data(){
     return {
+      activeMenu: "",
       menuList:[
           {
             title:'Dashboard',
@@ -87,9 +91,17 @@ export default {
             title:"关于",
             path:"/",
           }
-      ]
+      ],
     }
   },
+  created(){
+    this.activeMenu = this.initialActive || "home";
+  },
+  methods:{
+    changeActive: function(active){
+      this.activeMenu = active;
+    }
+  }
 }
 </script>
 
@@ -97,8 +109,8 @@ export default {
   <div>
       <nav>
           <div v-for="item in menuList">
-            <router-link :to="item.path"> {{ item.title }}</router-link>
-            <div class="subNav" v-if="item.children && item.children.length > 0">
+            <div class="navSection" @click="changeActive(item.title)"> {{ item.title }}</div>
+            <div class="subNav" v-if="item.children && item.children.length > 0 && activeMenu == item.title">
               <router-link v-for="subItem in item.children" :to="subItem.path"> {{ subItem.title }}</router-link>
             </div>
           </div>
@@ -142,9 +154,18 @@ nav a {
   padding-left: 1rem;
 }
 
+.navSection{
+  display: inline-block;
+  color: white;
+  width: 100%;
+  padding: 0.3rem;
+  padding-left: 1rem;
+}
+
 .subNav{
   display: flex;
   flex-direction: column;
+  transition: .5s ease-in-out;
 }
 .subNav a {
   padding-left: 2rem;
