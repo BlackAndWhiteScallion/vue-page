@@ -44,7 +44,7 @@ export default{
         <p>您的用户名与密码不相符</p>
       </div>
       <div id="username">
-        <label @click="$router.push('about')">用户名</label>
+        <label>用户名</label>
         <input type="text" v-model="username">
       </div>
       <div> 

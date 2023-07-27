@@ -31,7 +31,7 @@ export default {
   data() {
     return {
       chartData: {
-        labels: ['January', 'February', 'March', 'April'],
+        labels: ['搜索引擎', '直接访问', '邮件营销', '联盟广告'],
         datasets: [ {backgroundColor: ['rgba(8,160,198,1)', 'rgba(151,238,238,1)', 'rgba(154,15,148,1)', 'rgb(75, 192, 192, 1)' ], data: [40, 20, 12, 44] } ],
         
       },

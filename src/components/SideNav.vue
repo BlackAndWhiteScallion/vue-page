@@ -19,11 +19,11 @@ export default {
               },
               {
                 title:'零代码',
-                path:"/",
+                path:"/1",
               },
               {
                 title:"工作台",
-                path:"/",
+                path:"/2",
               },
             ]
           },

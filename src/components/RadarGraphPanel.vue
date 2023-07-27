@@ -38,34 +38,33 @@ export default {
     return {
       chartData: {
         labels: [
-          'Eating',
-          'Drinking',
-          'Sleeping',
-          'Designing',
-          'Coding',
-          'Cycling',
-          'Running'
+          '电脑',
+          '耳机',
+          'Ipad',
+          '手机',
+          '耳机',
+          '充电器',
         ],
         datasets: [
             {
-              label: 'dataset',
+              label: '访问',
               backgroundColor: 'rgba(151,238,238,0.5)',
               borderColor: 'rgba(151,238,238,1)',
               pointBackgroundColor: 'rgba(151,238,238,0.5)',
               pointBorderColor: '#fff',
               pointHoverBackgroundColor: '#fff',
               pointHoverBorderColor: 'rgba(179,181,198,1)',
-              data: [65, 59, 90, 81, 56, 55, 40]
+              data: [65, 59, 90, 81, 56, 55]
             },
             {
-              label: 'dataset',
+              label: '购买',
               backgroundColor: 'rgba(8,160,198,0.5)',
               borderColor: 'rgba(8,160,198,1)',
               pointBackgroundColor: 'rgba(8,160,198,1)',
               pointBorderColor: '#fff',
               pointHoverBackgroundColor: '#fff',
               pointHoverBorderColor: 'rgba(255,99,132,1)',
-              data: [28, 48, 40, 19, 96, 27, 100]
+              data: [28, 48, 40, 19, 96, 27]
             },
           ]
       },
@@ -76,7 +75,7 @@ export default {
           title:{
             align: 'start',
             display: true,
-            text:'访问来源',
+            text:'转化率',
           },
           legend:{
             display: true,

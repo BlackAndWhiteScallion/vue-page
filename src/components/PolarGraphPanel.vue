@@ -34,12 +34,10 @@ export default {
     return {
       chartData: {
         labels: [
-          'Eating',
-          'Drinking',
-          'Sleeping',
-          'Designing',
-          'Coding',
-          'Cycling',
+          '电子产品',
+          '化妆品',
+          '服装',
+          '家居',
         ],
         datasets: [
           {
@@ -49,7 +47,7 @@ export default {
             pointBorderColor: '#fff',
             pointHoverBackgroundColor: '#fff',
             pointHoverBorderColor: 'rgba(179,181,198,1)',
-            data: [65, 59, 90, 81, 23, 43]
+            data: [65, 59, 90, 81]
           },
         ]
       },
@@ -59,7 +57,7 @@ export default {
         scales: {
           r: {
             pointLabels: {
-              display: true,
+              display: false,
               centerPointLabels: true,
               font: {
                 size: 12
@@ -71,12 +69,12 @@ export default {
           title:{
             align: 'start',
             display: true,
-            text:'访问来源',
+            text:'成交占比',
           },
           legend:{
             display: false,
           }
-        }
+        },
       }
     }
   }
