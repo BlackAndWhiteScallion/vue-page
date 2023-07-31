@@ -1,5 +1,9 @@
 @import "./base.css";
 
+html{
+  font-size: 100%;
+}
+
 #app {
   font-weight: normal;
 }
@@ -20,5 +24,18 @@ a,
 @media (min-width: 1024px) {
   body {
     place-items: center;
+  }
+  html{
+    font-size: 100%;   
+  }
+}
+@media (min-width: 750px){
+  html{
+    font-size: 75%;
+  }
+}
+@media (min-width: 500px){
+  html{
+    font-size: 50%;
   }
 }
