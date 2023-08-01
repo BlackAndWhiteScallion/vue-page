@@ -21,7 +21,19 @@ const router = new VueRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import ('../views/HomeView.vue')
     },
+    {
+      path: '*',
+      name: '404',
+      component: () => import ('../views/404.vue')
+    },
   ]
+})
+
+var history: (string | null | undefined)[] = [];
+router.beforeEach((to, from, next) => {
+    history.push(to.name);
+    console.log(history);
+    next();
 })
 
 export default router
