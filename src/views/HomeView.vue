@@ -1,38 +1,3 @@
-<script lang="ts">
-import SideNav from '@/components/SideNav.vue'
-import TopNav from '@/components/TopNav.vue'
-import DataPanel from '@/components/DataPanel.vue'
-import DonutGraphPanel from '@/components/DonutGraphPanel.vue'
-import LineGraphPanel from '@/components/LineGraphPanel.vue'
-import PolarGraphPanel from '@/components/PolarGraphPanel.vue'
-import RadarGraphPanel from '@/components/RadarGraphPanel.vue'
-
-export default{
-  components: {
-    SideNav,
-    TopNav,
-    DataPanel,
-    DonutGraphPanel,
-    LineGraphPanel,
-    PolarGraphPanel,
-    RadarGraphPanel
-  },
-  data() {
-    return {
-      display: 1,
-    }
-  },
-  methods:{
-    Display1(){
-      this.display = 1;
-    },
-    Display2(){
-      this.display = 2;
-    }
-  }
-}
-</script>
-
 <template>
   <div>
     <SideNav></SideNav>
@@ -75,6 +40,41 @@ export default{
     </div>
   </div>
 </template>
+
+<script lang="ts">
+import SideNav from '@/components/SideNav.vue'
+import TopNav from '@/components/TopNav.vue'
+import DataPanel from '@/components/DataPanel.vue'
+import DonutGraphPanel from '@/components/DonutGraphPanel.vue'
+import LineGraphPanel from '@/components/LineGraphPanel.vue'
+import PolarGraphPanel from '@/components/PolarGraphPanel.vue'
+import RadarGraphPanel from '@/components/RadarGraphPanel.vue'
+
+export default{
+  components: {
+    SideNav,
+    TopNav,
+    DataPanel,
+    DonutGraphPanel,
+    LineGraphPanel,
+    PolarGraphPanel,
+    RadarGraphPanel
+  },
+  data() {
+    return {
+      display: 1,
+    }
+  },
+  methods:{
+    Display1(){
+      this.display = 1;
+    },
+    Display2(){
+      this.display = 2;
+    }
+  }
+}
+</script>
 
 <style scoped>
 .c{
