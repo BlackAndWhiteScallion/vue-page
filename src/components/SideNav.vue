@@ -19,7 +19,7 @@ export default {
               },
               {
                 title:'零代码',
-                path:"/1",
+                path:"/element",
               },
               {
                 title:"工作台",

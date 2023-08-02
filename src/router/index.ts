@@ -22,6 +22,18 @@ const router = new VueRouter({
       component: () => import ('../views/HomeView.vue')
     },
     {
+      path:'/element',
+      name:'ElementLogin',
+      // @ts-ignore
+      component: ()=> import ('../views/ElementLoginView.vue')
+    },
+    {
+      path:'/element-home',
+      name:'ElementHome',
+      // @ts-ignore
+      component: ()=> import('../views/ElementHomeView.vue')
+    },
+    {
       path: '*',
       name: '404',
       component: () => import ('../views/404.vue')
