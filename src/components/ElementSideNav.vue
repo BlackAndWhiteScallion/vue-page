@@ -1,52 +1,154 @@
 <template>
     <div>
-    <el-menu default-active="1-4-1" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose">
-        <el-submenu index="1">
-        <template slot="title">
-            <i class="el-icon-location"></i>
-            <span slot="title">导航一</span>
-        </template>
-        <el-menu-item-group>
-            <span slot="title">分组一</span>
-            <el-menu-item index="1-1">选项1</el-menu-item>
-            <el-menu-item index="1-2">选项2</el-menu-item>
-        </el-menu-item-group>
-        <el-menu-item-group title="分组2">
-            <el-menu-item index="1-3">选项3</el-menu-item>
-        </el-menu-item-group>
-        <el-submenu index="1-4">
-            <span slot="title">选项4</span>
-            <el-menu-item index="1-4-1">选项1</el-menu-item>
-        </el-submenu>
-        </el-submenu>
-        <el-menu-item index="2">
-        <i class="el-icon-menu"></i>
-        <span slot="title">导航二</span>
-        </el-menu-item>
-        <el-menu-item index="3" disabled>
-        <i class="el-icon-document"></i>
-        <span slot="title">导航三</span>
-        </el-menu-item>
-        <el-menu-item index="4">
-        <i class="el-icon-setting"></i>
-        <span slot="title">导航四</span>
-        </el-menu-item>
-    </el-menu>
+        <el-menu default-active="1-4-1" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose">
+            <el-submenu v-for="i in menuList" :index = "i.title">
+                <template slot="title">
+                    <i v-if="i.icon" :class="['el-icon-' + i.icon]"></i>
+                    <span slot="title">{{i.title}}</span>
+                </template>
+                <div v-if = "i.children && i.children.length">
+                    <el-menu-item-group>
+                        <el-menu-item v-for="item in i.children" :route="item.path">
+                            <i v-if="item.icon" :class="['el-icon-' + item.icon]"></i>
+                            {{item.title}}
+                        </el-menu-item>
+                    </el-menu-item-group>
+                </div>
+            </el-submenu>       
+        </el-menu>
     </div>
 </template>
 
 <style>
+.el-menu-item-group__title{
+    padding: 0;
+}
 .el-menu-vertical-demo:not(.el-menu--collapse) {
     width: 200px;
     min-height: 400px;
     position: absolute;
 }
+body{
+    background: white;
+}
 </style>
 
-<script>
+<script lang="ts">
 export default {
+    name:'ElementSideNav',
+    props:{
+        init: String,
+    },
     data() {   
-        return {}
+        return {
+            activeMenu: "",
+            menuList:[
+                {
+                    title:'Dashboard',
+                    path:'/home',
+                    icon:'menu',
+                    children:[
+                        {
+                            title:"首页",
+                            icon:'mobile',
+                            path:"/home",
+                        },
+                        {
+                            title:'零代码',
+                            icon:'s-claim',
+                            path:"/element",
+                        },
+                        {
+                            title:"工作台",
+                            icon:'menu',
+                            path:"/element-home",
+                        },
+                    ]
+                },
+                {
+                    title:"个人办公",
+                    icon:'coffee-cup',
+                    path:'/',
+                    children:[
+                        {
+                            title:"首页",
+                            icon:'mobile',
+                            path:"/home",
+                        },
+                        {
+                            title:'零代码',
+                            icon:'s-claim',
+                            path:"/element",
+                        },
+                        {
+                            title:"工作台",
+                            icon:'menu',
+                            path:"/element-home",
+                        },
+                    ]
+                },
+                {
+                    title:"业务申请",
+                    path:'/',
+                },
+                {
+                    title:"QA申请",
+                    path:'/',
+                },
+                {
+                    title:"表单设计",
+                    path:"/",
+                },
+                {
+                    title:"流程设计",
+                    path:"/",
+                },
+                {
+                    title:"在线开发",
+                    path:"/",
+                },
+                {
+                    title:"可视化设计",
+                    path:"/",
+                },
+                {
+                    title:"流程管理",
+                    path:"/",
+                },
+                {
+                    title:"统计报表",
+                    path:"/",
+                },
+                {
+                    title:"OA模块",
+                    path:"/"
+                },
+                {
+                    title:"系统管理",
+                    path:"/",
+                },
+                {
+                    title:"系统监控",
+                    path:"/",
+                },
+                {
+                    title:"消息中心",
+                    path:"/",
+                },
+                {
+                    title:"Mock示例",
+                    path:"/",
+                },
+                {
+                    title:"组件功能",
+                    path:"/",
+                },
+                {
+                    title:"关于",
+                    path:"/",
+                }
+            ],
+        }
     },
     methods: {
         handleOpen(key, keyPath) {

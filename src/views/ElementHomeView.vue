@@ -48,11 +48,21 @@
             </div>
             <div class="middlesection">
                 <el-card id="middleGraphPanel">
+                    <el-tabs v-model="activeName" @tab-click="handleClick">
+                        <el-tab-pane label="用户管理" name="first">                            
+                            <span>好吃的汉堡</span>
+                            <div class="bottom clearfix">
+                            </div>
+                            <LineGraphPanel></LineGraphPanel>
+                        </el-tab-pane>
+                        <el-tab-pane label="配置管理" name="second">
+                            <span>不好吃的汉堡</span>
+                            <div class="bottom clearfix">
+                            </div>
+                            <LineGraphPanel></LineGraphPanel>
+                        </el-tab-pane>
+                    </el-tabs>
                     <div>
-                        <span>好吃的汉堡</span>
-                        <div class="bottom clearfix">
-                        </div>
-                        <LineGraphPanel></LineGraphPanel>
                     </div>
                 </el-card>
             </div>
