@@ -14,7 +14,7 @@
                     <div slot="header" class="clearfix">
                         <span>卡片名称</span>
                     </div>
-                    <div v-for="o in 4" :key="o" class="text item">
+                    <div v-for="o in 2" :key="o" class="text item">
                         {{'列表内容 ' + o }}
                     </div>
                     </el-card>
@@ -23,7 +23,7 @@
                     <div slot="header" class="clearfix">
                         <span>卡片名称</span>
                     </div>
-                    <div v-for="o in 4" :key="o" class="text item">
+                    <div v-for="o in 2" :key="o" class="text item">
                         {{'列表内容 ' + o }}
                     </div>
                     </el-card>
@@ -32,7 +32,7 @@
                     <div slot="header" class="clearfix">
                         <span>卡片名称</span>
                     </div>
-                    <div v-for="o in 4" :key="o" class="text item">
+                    <div v-for="o in 2" :key="o" class="text item">
                         {{'列表内容 ' + o }}
                     </div>
                     </el-card>
@@ -41,7 +41,7 @@
                     <div slot="header" class="clearfix">
                         <span>卡片名称</span>
                     </div>
-                    <div v-for="o in 4" :key="o" class="text item">
+                    <div v-for="o in 2" :key="o" class="text item">
                         {{'列表内容 ' + o }}
                     </div>
                     </el-card>
@@ -68,24 +68,21 @@
             </div>
             <div class="bottomsection">
                 <el-card>
-                    <div style="padding: 14px;">
-                        <span>好吃的汉堡</span>
+                    <div>
                         <div class="bottom clearfix">
                             <PolarGraphPanel></PolarGraphPanel>
                         </div>
                     </div>
                 </el-card>
                 <el-card>
-                    <div style="padding: 14px;">
-                        <span>好吃的汉堡</span>
+                    <div>
                         <div class="bottom clearfix">
                             <DonutGraphPanel></DonutGraphPanel>
                         </div>
                     </div>
                 </el-card>
                 <el-card>
-                    <div style="padding: 14px;">
-                        <span>好吃的汉堡</span>
+                    <div>
                         <div class="bottom clearfix">
                             <RadarGraphPanel></RadarGraphPanel>
                         </div>

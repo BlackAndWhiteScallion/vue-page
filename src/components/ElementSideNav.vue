@@ -19,17 +19,23 @@
     </div>
 </template>
 
-<style>
+<style scoped>
+
+.el-submenu__title{
+    height: 3rem;
+}
+.el-menu-item{
+    height: 2rem;
+    line-height: 2rem;
+}
 .el-menu-item-group__title{
     padding: 0;
+    display: none;
 }
 .el-menu-vertical-demo:not(.el-menu--collapse) {
     width: 200px;
     min-height: 400px;
     position: absolute;
-}
-body{
-    background: white;
 }
 </style>
 
