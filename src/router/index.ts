@@ -11,7 +11,8 @@ const router = new VueRouter({
     {
       path: '/',
       name: 'login',
-      component: LoginView
+      component: LoginView,
+      meta:{title:'登录'}
     },
     {
       path: '/home',
@@ -19,19 +20,33 @@ const router = new VueRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import ('../views/HomeView.vue')
+      component: () => import ('../views/HomeView.vue'),
+      meta:{title:'主页'}
     },
     {
       path:'/element',
       name:'ElementLogin',
       // @ts-ignore
-      component: ()=> import ('../views/ElementLoginView.vue')
+      component: ()=> import ('../views/ElementLoginView.vue'),
+      meta:{title:"登录2"}
     },
     {
       path:'/element-home',
       name:'ElementHome',
       // @ts-ignore
-      component: ()=> import('../views/ElementHomeView.vue')
+      component: ()=> import('../views/ElementHomeView.vue'),
+      meta: {title:'主页2'}
+    },
+    {
+      path: '/about',
+      name: 'About',
+      // @ts-ignore
+      component: ()=> import('../views/AboutView.vue')
+    },
+    {
+      path: '/element-about',
+      name: 'ElementAbout',
+      component: ()=> import('../views/ElementAboutView.vue')
     },
     {
       path: '*',

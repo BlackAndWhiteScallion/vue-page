@@ -1,7 +1,7 @@
 <template>
   <div>
     <SideNav></SideNav>
-    <TopNav class="topNav"></TopNav>
+    <BreadcrumbsPP></BreadcrumbsPP>
     <div class="c">
       <div class="topPanel">
         <DataPanel class="data"></DataPanel>
@@ -49,6 +49,8 @@ import DonutGraphPanel from '@/components/DonutGraphPanel.vue'
 import LineGraphPanel from '@/components/LineGraphPanel.vue'
 import PolarGraphPanel from '@/components/PolarGraphPanel.vue'
 import RadarGraphPanel from '@/components/RadarGraphPanel.vue'
+// @ts-ignore
+import BreadcrumbsPP from '@/components/Breadcrumbs.vue'
 
 export default{
   components: {
@@ -58,7 +60,8 @@ export default{
     DonutGraphPanel,
     LineGraphPanel,
     PolarGraphPanel,
-    RadarGraphPanel
+    RadarGraphPanel,
+    BreadcrumbsPP
   },
   data() {
     return {
@@ -77,6 +80,15 @@ export default{
 </script>
 
 <style scoped>
+.topNav{
+  position: fixed;
+  width: 100%;
+  font-size: 0.7rem;
+  padding: 0.5rem;
+  margin-bottom: 1px;
+  z-index: 10;
+  background-color: white;
+}
 .c{
   display: flex;
   flex-direction: column;
