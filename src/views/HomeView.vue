@@ -1,7 +1,5 @@
 <template>
   <div>
-    <SideNav></SideNav>
-    <BreadcrumbsPP></BreadcrumbsPP>
     <div class="c">
       <div class="topPanel">
         <DataPanel class="data"></DataPanel>
@@ -42,26 +40,23 @@
 </template>
 
 <script lang="ts">
-import SideNav from '@/components/SideNav.vue'
+
 import TopNav from '@/components/TopNav.vue'
 import DataPanel from '@/components/DataPanel.vue'
 import DonutGraphPanel from '@/components/DonutGraphPanel.vue'
 import LineGraphPanel from '@/components/LineGraphPanel.vue'
 import PolarGraphPanel from '@/components/PolarGraphPanel.vue'
 import RadarGraphPanel from '@/components/RadarGraphPanel.vue'
-// @ts-ignore
-import BreadcrumbsPP from '@/components/Breadcrumbs.vue'
+
 
 export default{
   components: {
-    SideNav,
     TopNav,
     DataPanel,
     DonutGraphPanel,
     LineGraphPanel,
     PolarGraphPanel,
     RadarGraphPanel,
-    BreadcrumbsPP
   },
   data() {
     return {

@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import LoginView from '../views/LoginView.vue'
+import SideNav from '@/components/SideNav.vue'
+import BreadcrumbsPP from '@/components/Breadcrumbs.vue'
 
 Vue.use(VueRouter)
 
@@ -20,14 +22,19 @@ const router = new VueRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import ('../views/HomeView.vue'),
-      meta:{title:'主页', breadcrumb: true},
+      component: {SideNav, BreadcrumbsPP},
       children:[
+        {
+          path: 'home',
+          name: 'home',
+          component: () => import ('../views/HomeView.vue'),
+          meta:{title:'主页', breadcrumb: true},
+        },
         {
           path:'about',
           component: () => import ('../views/AboutView.vue'),
           meta: {title:'图表', breadcrumb: true},
-        }
+        }, 
       ]
     },
     {

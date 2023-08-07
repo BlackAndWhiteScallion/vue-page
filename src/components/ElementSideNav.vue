@@ -57,7 +57,7 @@ export default {
                         {
                             title:"首页",
                             icon:'mobile',
-                            path:"/home",
+                            path:"/home/home",
                         },
                         {
                             title:'零代码',

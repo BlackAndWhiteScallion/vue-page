@@ -15,7 +15,7 @@ export default {
             children:[
               {
                 title:"首页",
-                path:"/home",
+                path:"/home/home",
               },
               {
                 title:'零代码',
