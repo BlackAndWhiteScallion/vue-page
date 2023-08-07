@@ -3,11 +3,7 @@
         <ElementSideNav></ElementSideNav>
         <div class="content">
             <div class="topNav">
-                <el-breadcrumb separator="/">
-                    <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-                    <el-breadcrumb-item><a href="/">活动管理</a></el-breadcrumb-item>
-                    <el-breadcrumb-item>活动列表</el-breadcrumb-item>
-                </el-breadcrumb>
+                <BreadcrumbsPP></BreadcrumbsPP>
             </div>
             <div class="topsection">
                 <el-card class="box-card">
@@ -99,6 +95,7 @@ import DonutGraphPanel from '@/components/DonutGraphPanel.vue'
 import LineGraphPanel from '@/components/LineGraphPanel.vue'
 import PolarGraphPanel from '@/components/PolarGraphPanel.vue'
 import RadarGraphPanel from '@/components/RadarGraphPanel.vue'
+import BreadcrumbsPP from "@/components/Breadcrumbs.vue"
 
 export default {
     components:{

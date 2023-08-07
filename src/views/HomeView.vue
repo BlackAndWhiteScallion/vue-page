@@ -10,7 +10,7 @@
         <DataPanel class="data"></DataPanel>
       </div>
       <div class="middlePanel">
-        <div class="middleNav">  
+        <div class="middleNav">
           <div class="middleNavButton" @click="Display1" v-bind:class="{selected:display == 1}">流量趋势</div>
           <div class="middleNavButton" @click="Display2" v-bind:class="{selected:display == 2}">访问量</div>
         </div>

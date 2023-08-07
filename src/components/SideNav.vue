@@ -32,8 +32,8 @@ export default {
             path:'/',
             children:[
               {
-                title:"首页",
-                path:"/home",
+                title:"图表",
+                path:"/home/about",
               },
               {
                 title:'零代码',
@@ -43,7 +43,7 @@ export default {
                 title:"工作台",
                 path:"/2",
               },
-            ]
+            ],
           },
           {
             title:"业务申请",
