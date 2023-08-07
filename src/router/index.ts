@@ -21,7 +21,7 @@ const router = new VueRouter({
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import ('../views/HomeView.vue'),
-      meta:{title:'主页'}
+      meta:{title:'主页', breadcrumb: true}
     },
     {
       path:'/element',

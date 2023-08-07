@@ -30,10 +30,38 @@ export default {
           {
             title:"个人办公",
             path:'/',
+            children:[
+              {
+                title:"首页",
+                path:"/home",
+              },
+              {
+                title:'零代码',
+                path:"/element",
+              },
+              {
+                title:"工作台",
+                path:"/2",
+              },
+            ]
           },
           {
             title:"业务申请",
             path:'/',
+            children:[
+              {
+                title:"首页",
+                path:"/home",
+              },
+              {
+                title:'零代码',
+                path:"/element",
+              },
+              {
+                title:"工作台",
+                path:"/2",
+              },
+            ]
           },
           {
             title:"QA申请",

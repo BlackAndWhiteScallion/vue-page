@@ -1,6 +1,5 @@
 <template>
     <div class="topNav">
-        <p>p</p>
         <el-breadcrumb separator="/">
             <el-breadcrumb-item v-for="(v, i) in lists" :key="i" :to="{path:v.path}">{{v.meta.title}}</el-breadcrumb-item>
         </el-breadcrumb>
@@ -17,8 +16,12 @@ export default{
     data(){
         return {
             lists: [{
+                name:'',
                 path:'',
-                meta:{title:''},
+                meta:{
+                    title:'',
+                    breadcrumb: true,
+                }
             }]
         }
     },
@@ -32,8 +35,6 @@ export default{
     },
     methods:{
         generateBreadcrumb(){
-            console.log(this.$route.matched);
-            console.log(this.$route);
             const matched = this.$route.matched;
             var breadcrumbslist : any[] = [];
             matched.forEach(item => {
@@ -41,7 +42,8 @@ export default{
                 if (meta.breadcrumb){
                     breadcrumbslist.push({
                         name,
-                        path
+                        path,
+                        meta
                     })
                 }
             })
