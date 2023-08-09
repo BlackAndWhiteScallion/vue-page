@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <p>404</p>
+    <div class="app">
+        <p>404</p> <br>
         <button @click="back()">Back to home</button>
     </div>
 </template>
@@ -15,5 +15,11 @@ export default{
 }
 </script>
 
-<style>
+<style scoped>
+.app{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
 </style>

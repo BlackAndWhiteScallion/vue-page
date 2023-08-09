@@ -1,8 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import LoginView from '../views/LoginView.vue'
-import SideNav from '@/components/SideNav.vue'
-import BreadcrumbsPP from '@/components/Breadcrumbs.vue'
 
 Vue.use(VueRouter)
 
@@ -22,19 +20,31 @@ const router = new VueRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: SideNav,
+      component: () => import ('../views/NavView.vue'),
+      meta: {title: '主页', breadcrumb: true},
       children:[
         {
-          path: 'home',
+          path: '/',
           name: 'home',
           component: () => import ('../views/HomeView.vue'),
           meta:{title:'主页', breadcrumb: true},
         },
         {
+          path: 'home',
+          name: 'home',
+          component: () => import ('../components/DonutGraphPanel.vue'),
+          meta: {title: '图表1', breadcrumb: true},
+        },
+        {
           path:'about',
           component: () => import ('../views/AboutView.vue'),
-          meta: {title:'图表', breadcrumb: true},
+          meta: {title:'图表2', breadcrumb: true},
         }, 
+        {
+          path:'graph',
+          component: () => import ('../components/PolarGraphPanel.vue'),
+          meta: {title: '图表3'}
+        },
       ]
     },
     {
@@ -52,10 +62,18 @@ const router = new VueRouter({
       meta: {title:'主页2'}
     },
     {
-      path: '/about',
-      name: 'About',
+      path: '/office',
+      name: 'Office',
       // @ts-ignore
-      component: ()=> import('../views/AboutView.vue')
+      component: ()=> import('../views/AboutView.vue'),
+      meta:{title:'个人办公'},
+      children:[
+        {
+          path:'about',
+          component: () => import ('../views/AboutView.vue'),
+          meta: {title:'图表', breadcrumb: true},
+        },
+      ]
     },
     {
       path: '/element-about',

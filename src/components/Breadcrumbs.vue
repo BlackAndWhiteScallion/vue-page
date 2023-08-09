@@ -1,12 +1,23 @@
 <template>
-    <div class="topNav">
+    <div id="topNav">
         <el-breadcrumb separator="/">
             <el-breadcrumb-item v-for="(v, i) in lists" :key="i" :to="{path:v.path}">{{v.meta.title}}</el-breadcrumb-item>
         </el-breadcrumb>
     </div>
 </template>
 
-<style>
+<style scoped>
+#topNav{
+  position: fixed;
+  width: 100%;
+  font-size: 0.7rem;
+  padding: 0.5rem;
+  margin-bottom: 1px;
+  z-index: 10;
+  background-color: white;
+  margin-left: 10%;
+  top: 1rem;
+}
 </style>
 
 <script lang="ts">

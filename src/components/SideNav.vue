@@ -15,7 +15,7 @@ export default {
             children:[
               {
                 title:"首页",
-                path:"/home/home",
+                path:"/home/",
               },
               {
                 title:'零代码',
@@ -23,24 +23,24 @@ export default {
               },
               {
                 title:"工作台",
-                path:"/2",
+                path:"/home/home",
               },
             ]
           },
           {
             title:"个人办公",
-            path:'/',
+            path:'/office',
             children:[
               {
                 title:"图表",
-                path:"/home/about",
+                path:"/office/about",
               },
               {
-                title:'零代码',
+                title:'Element界面',
                 path:"/element",
               },
               {
-                title:"工作台",
+                title:"404",
                 path:"/2",
               },
             ],
@@ -141,10 +141,10 @@ export default {
   <div>
       <nav>
           <div v-for="item in menuList">
-            <div class="navSection" @click="changeActive(item.title)"> {{ item.title }}</div>
-            <div class="subNav" v-if="item.children && item.children.length > 0 && activeMenu == item.title">
-              <router-link v-for="subItem in item.children" :to="subItem.path"> {{ subItem.title }}</router-link>
-            </div>
+              <div class="navSection" @click="changeActive(item.title)"> {{ item.title }}</div>
+              <div class="subNav" v-if="item.children && item.children.length > 0 && activeMenu == item.title">
+                <router-link v-for="subItem in item.children" :to="subItem.path"> {{ subItem.title }}</router-link>
+              </div>
           </div>
       </nav>
     <router-view />
