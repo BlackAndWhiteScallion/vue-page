@@ -37,13 +37,13 @@ const router = new VueRouter({
         },
         {
           path:'about',
-          component: () => import ('../views/AboutView.vue'),
+          component: () => import ('../components/LineGraphPanel.vue'),
           meta: {title:'图表2', breadcrumb: true},
         }, 
         {
           path:'graph',
           component: () => import ('../components/PolarGraphPanel.vue'),
-          meta: {title: '图表3'}
+          meta: {title: '图表3', breadcrumb: true},
         },
       ]
     },

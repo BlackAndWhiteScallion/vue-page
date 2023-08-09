@@ -18,13 +18,17 @@ export default {
                 path:"/home/",
               },
               {
-                title:'零代码',
-                path:"/element",
-              },
-              {
-                title:"工作台",
+                title:"图表1",
                 path:"/home/home",
               },
+              {
+                title:'图表2',
+                path:"/home/about",
+              },
+              {
+                title:'图表3',
+                path:'/home/graph',
+              }
             ]
           },
           {
@@ -32,12 +36,12 @@ export default {
             path:'/office',
             children:[
               {
-                title:"图表",
-                path:"/office/about",
+                title:'Element登录',
+                path:"/element",
               },
               {
-                title:'Element界面',
-                path:"/element",
+                title:"Element页面",
+                path:"/element-home",
               },
               {
                 title:"404",

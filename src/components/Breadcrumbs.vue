@@ -14,7 +14,6 @@
   padding: 0.5rem;
   margin-bottom: 1px;
   z-index: 10;
-  background-color: white;
   margin-left: 10%;
   top: 1rem;
 }
