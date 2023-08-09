@@ -88,9 +88,17 @@ const router = new VueRouter({
   ]
 })
 
-var history: (string | null | undefined)[] = [];
+var history = new Object();
+
 router.beforeEach((to, from, next) => {
-    history.push(to.name);
+    var text = to.path;
+    if (text){
+      if (!history[text]){
+        history[text] = 1;
+      } else {
+        history[text] += 1;
+      }
+    }
     console.log(history);
     next();
 })
