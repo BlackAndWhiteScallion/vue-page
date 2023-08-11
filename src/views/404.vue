@@ -1,6 +1,6 @@
 <template>
     <div class="app">
-        <p>404</p> <br>
+        <div><p>404</p></div>
         <button @click="back()">Back to home</button>
     </div>
 </template>
