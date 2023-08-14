@@ -4,7 +4,7 @@ import LoginPanel from '@/components/LoginPanel.vue'
 
 <template>
   <main>
-    <img class="backgroundImage" src="src\assets\background.jpg">
+    <img class="backgroundImage" src="@/assets/background.jpg">
     <div class="LoginPanel">
     <LoginPanel></LoginPanel>
   </div>
